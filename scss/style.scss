@@ -69,10 +69,6 @@ $font: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
-.text-brown {
-    color: $main-brown;
-}
-
 .hero {
     height: 850px;
     width: 100%;
@@ -193,7 +189,6 @@ $font: 'Montserrat', sans-serif;
         justify-content: center;
         align-items: center;
         .hero-content-main-text {
-            color: #fff;
             font-family: $font;
             font-size: 72px;
             font-weight: 700;
@@ -201,6 +196,12 @@ $font: 'Montserrat', sans-serif;
             text-transform: uppercase;
             text-align: center;
             user-select: none;
+            h1 {
+                color: #fff;
+            }
+            .text-brown {
+                color: $main-brown;
+            }
         }
         .hero-content-number {
             color: #fff;
@@ -387,38 +388,37 @@ $font: 'Montserrat', sans-serif;
             font-weight: 400;
         }
     }
-    .our-projects-navbar {
+    .our-projects-list {
         margin-top: 55px;
-        .our-projects-list {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            li {
-                min-width: 150px;
-                text-align: center;
-                height: 60px;
-                border: 1px solid #cfcfcf;
-                background-color: #ededed;
-                color: #000;
-                font-family: $font;
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 60px;
-                text-transform: uppercase;
-                border-left: none;
-                cursor: pointer;
-                transition: 0.4s;
-                &:nth-child(1) {
-                    border-radius: 50px 0 0 50px ;
-                    border-left: 1px solid #cfcfcf;
-                }
-                &:nth-child(6) {
-                    border-radius: 0 50px 50px 0;
-                }
-                &:hover {
-                    border-bottom-color: $main-brown;
-                    border-bottom-width: 4px;
-                }
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        li {
+            max-width: 150px;
+            width: 100%;
+            height: 60px;
+            text-align: center;
+            border: 1px solid #cfcfcf;
+            background-color: #ededed;
+            color: #000;
+            font-family: $font;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 60px;
+            text-transform: uppercase;
+            border-left: none;
+            cursor: pointer;
+            transition: 0.4s;
+            &:nth-child(1) {
+                border-radius: 50px 0 0 50px ;
+                border-left: 1px solid #cfcfcf;
+            }
+            &:nth-child(6) {
+                border-radius: 0 50px 50px 0;
+            }
+            &:hover {
+                border-bottom-color: $main-brown;
+                border-bottom-width: 4px;
             }
         }
     }
@@ -566,6 +566,7 @@ $font: 'Montserrat', sans-serif;
     .our-team-content {
         padding-top: 40px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         .our-team-profile {
             display: grid;
@@ -578,7 +579,7 @@ $font: 'Montserrat', sans-serif;
             height: 430px;
             background-color: #fff;
             border-radius: 4px;
-            margin: 0 2px;
+            margin: 2px;
             .profile-pic {
                 grid-area: "pic";
                 margin: 0 auto;
@@ -608,6 +609,7 @@ $font: 'Montserrat', sans-serif;
                 color: #fff;
                 justify-self: center;
                 align-self: center;
+                text-align: center;
                 .fab, .fas {
                     width: 32px;
                     height: 32px;
@@ -678,7 +680,8 @@ $font: 'Montserrat', sans-serif;
             margin-bottom: 20px;
         }
         p {
-            width: 730px;
+            max-width: 730px;
+            width: 100%;
             text-align: center;
             color: #7e7e7e;
             font-family: $font;
@@ -1067,7 +1070,8 @@ $font: 'Montserrat', sans-serif;
     }
     .contact-us-form {
         padding-top: 60px;
-        width: 600px;
+        max-width: 600px;
+        width: 100%;
         margin: 0 auto;
         input {
             width: 100%;
@@ -1192,7 +1196,7 @@ $font: 'Montserrat', sans-serif;
         cursor: pointer;
     }
     footer {
-        height: 264px;
+        min-height: 264px;
         font-family: $font;
         display: flex;
         justify-content: space-between;
@@ -1204,6 +1208,7 @@ $font: 'Montserrat', sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            margin: 0 5px;
             .footer-social-icons {
                 display: flex;
                 .fab, .fas {
@@ -1233,6 +1238,7 @@ $font: 'Montserrat', sans-serif;
             max-width: 350px;
             width: 100%;
             height: 200px;
+            margin: 0 5px;
             p {
                 color: #7e7e7e;
                 font-size: 12px;
@@ -1249,6 +1255,7 @@ $font: 'Montserrat', sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin: 0 5px;
             .footer-email {
                 width: 220px;
                 margin: 0 auto;
@@ -1292,6 +1299,9 @@ $font: 'Montserrat', sans-serif;
 }
 
 @media screen and (max-width: 1024px) {
+    .hero .hero-content {
+        padding-top: 25%;
+    }
     .hero .navbar .navbar-container {
         .logo {
             margin-left: 100px;
@@ -1302,14 +1312,21 @@ $font: 'Montserrat', sans-serif;
         .navbar-list > li {
             display: block;
             height: 100px;
-            width: 33%;
+            width: 50%;
             float: left;
+            &:nth-child(9) {
+                width: 100%;
+            }
         }
+        .navbar-list > li a {
+            font-size: 22px;
+        }
+
         .navbar-list {
             display: none;
             width: 100%;
-            height: 300px;
-            background-color: rgba(0,0,0,.7);
+            height: 500px;
+            background-color: rgba(0,0,0,.8);
         }
         .toggle-menu {
             display: block;
@@ -1322,6 +1339,170 @@ $font: 'Montserrat', sans-serif;
 }
 
 
-@media screen and (max-width: 900px) {
-        
+@media screen and (max-width: 768px) {
+    .hero .hero-content {
+        padding-top: 35%;
+    }
+    .about-us .about-us-content .about-us-content-text {
+        color: #242424;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 25px;
+        width: 80%;
+        margin: 0 auto;
+        .about-us-content-btn {
+            display: block;
+            margin: 35px auto;
+        }
+    }
+    .premium .premium-content .premium-content-text h3::before {
+        left: -38px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .hero {
+        .hero-content {
+            padding-top: 55%;
+            .hero-content-main-text {
+                font-size: 2.8rem;
+                h1 {
+                    font-size: 2.8rem;
+                    width: 220px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .navbar .navbar-container {
+            .navbar-list {
+                top: 100px;
+                position: absolute;
+                height: 358px;
+            }
+            .navbar-list > li {
+                height: 70px;
+                width: 50%;
+            }
+        }
+    } 
+    
+    .about-us .about-us-content .about-us-content-video img {
+        width: 100%;
+    }
+    
+    .services .services-content {
+        flex-wrap: wrap;
+    }
+    .services .services-content [class^='item'] {
+        border: none;
+        border-top: 1px solid rgba(190, 190, 190, 0.5);
+        &:nth-child(4) {
+            border-right: none;
+        }
+        &:nth-child(1) {
+            border-top: none;
+        }
+    }
+
+    .our-projects .our-projects-list li {
+        padding: 0 3px;
+    }
+    
+    .our-team .our-team-content {
+        padding: 40px;
+        justify-content: space-evenly;
+    }
+    
+    .clients .clients-brands {
+        flex-wrap: wrap;
+    }
+    
+    .pricing .pricing-content {
+        flex-wrap: wrap;
+        padding: 50px;
+        .pricing-option {
+            margin: 5px auto;
+        }
+    }
+
+    .premium {
+        min-height: 956px;
+        height: 100%;
+        .premium-content {
+            flex-wrap: wrap;
+            .premium-content-text {
+                width: 66%;
+                margin: 0 auto;
+                font-family: "Montserrat", sans-serif;
+                h3::before {
+                    left: -55px;
+                }
+            }
+            .premium-content-picture {
+                width: 100%;
+            }
+        }
+        .premium-btn {
+            margin: 50px auto;
+        }
+    }
+    
+    .facts {
+        .facts-content {
+            flex-wrap: wrap;
+            height: 500px;
+        }
+    }
+
+    .social-bar .social-bar-content {
+        .social-bar-content-icons {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .social-bar-content-text {
+            margin-left: 10px;
+        }
+    }
+
+    .contact-us {
+        .contact-us-form .text-fields {
+            margin: 20px 0;
+            flex-wrap: wrap;
+            input {
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+        .contact-us-btn {
+            margin: 50px auto;
+        }
+    }
+
+    .map .map-address-box {
+        padding: 30px;
+        min-height: 350px;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
+        position: relative;
+    }
+
+    .footer footer {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        .footer-social {
+            margin: 50px 5px;
+        }
+        .footer-text {
+            margin: 20px 10px 0 10px;
+            height: 100%;
+        }
+        .footer-subscribe {
+            margin: 50px 5px 5px 0;
+        }
+    }
 }
