@@ -980,7 +980,7 @@ $font: 'Montserrat', sans-serif;
             grid-template-rows: 80px 50px 50px;
             font-family: $font;
             width: 200px;
-            height: 150px;
+            height: 180px;
             &:hover > h1 {
                 transform: scale(1.2);
             }
@@ -1342,7 +1342,6 @@ $font: 'Montserrat', sans-serif;
 
 @media screen and (max-width: 1062px) {
     .our-team .our-team-content {
-        justify-content: space-around;
     }
 }
 
@@ -1397,31 +1396,61 @@ $font: 'Montserrat', sans-serif;
 }
 
 @media screen and (max-width: 992px) {
-    
+    .our-team .our-team-content .profile-carousel {
+        position: absolute;
+        left: -30%;
+        right: 0;
+        margin: 0 auto;
+        height: 580px;
+        max-width: 992px;
+        width: 100%;
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 878px) {
+    .premium .premium-content .premium-content-text h3::before {
+        left: -38px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .hero .hero-content {
-        padding-top: 35%;
-    }
+    .hero {
+        .hero-content {
+            padding-top: 35%;
+        }
+
+        .navbar .navbar-container .navbar-list {
+            position: absolute;
+            top: 100px;
+            right: 0;
+        }
+    }    
 
     .our-projects .our-projects-list {
         display: none;
     }
 
-    .our-team-content {
-        display: flex;
-        flex-wrap: wrap;
+    .facts {
+        .facts-content {
+            flex-wrap: wrap;
+            .facts-content-item {
+                width: 50%;
+                margin: 20px 0;
+            }
+            .facts-content-item p {
+                width: 80%;
+                margin: 0 auto;
+            }
+        }
     }
-
+    
     .services .services-content {
         flex-wrap: wrap;
     }
     .services .services-content [class^='item'] {
         border: none;
-        border-collapse: collapse;
         width: 50%;
-        // border-top: 1px solid rgba(190, 190, 190, 0.5);
         &:nth-child(1) {
             border-bottom: 1px solid rgba(190, 190, 190, 0.5);
             border-right: 1px solid rgba(190, 190, 190, 0.5);
@@ -1461,78 +1490,7 @@ $font: 'Montserrat', sans-serif;
             margin: 35px auto;
         }
     }
-    .premium .premium-content .premium-content-text h3::before {
-        left: -38px;
-    }
-}
-
-@media screen and (max-width: 425px) {
-    .hero {
-        .hero-content {
-            padding-top: 55%;
-            .hero-content-main-text {
-                font-size: 2.8rem;
-                h1 {
-                    font-size: 2.8rem;
-                    width: 220px;
-                    text-align: center;
-                    margin: 0 auto;
-                }
-            }
-        }
-        .navbar .navbar-container {
-            .navbar-list {
-                top: 100px;
-                position: absolute;
-                height: 358px;
-            }
-            .navbar-list > li {
-                height: 70px;
-                width: 50%;
-            }
-        }
-    } 
     
-    .about-us .about-us-content .about-us-content-video img {
-        width: 100%;
-    }
-    
-    .services .services-content {
-        flex-wrap: wrap;
-    }
-    .services .services-content [class^='item'] {
-        border: none;
-        border-top: 1px solid rgba(190, 190, 190, 0.5);
-        &:nth-child(4) {
-            border-right: none;
-        }
-        &:nth-child(1) {
-            border-top: none;
-        }
-    }
-
-    .our-projects .our-projects-list li {
-        padding: 0 3px;
-    }
-    
-    .our-team .our-team-content {
-        padding: 40px;
-        justify-content: space-evenly;
-    }
-    
-    .clients .clients-brands {
-        flex-wrap: wrap;
-    }
-    
-    .pricing .pricing-content {
-        flex-wrap: wrap;
-        padding: 50px;
-        .pricing-option {
-            margin: 5px auto;
-            width: 80%;
-        }
-    }
-
     .premium {
         min-height: 956px;
         height: 100%;
@@ -1554,14 +1512,144 @@ $font: 'Montserrat', sans-serif;
             margin: 50px auto;
         }
     }
-    
-    .facts {
-        .facts-content {
-            flex-wrap: wrap;
-            height: 500px;
+}
+
+@media screen and (max-width: 680px) {
+    .hero {
+        .hero-content {
+            padding-top: 35%;
+            .hero-content-main-text {
+                font-size: 2.8rem;
+                h1 {
+                    font-size: 2.8rem;
+                    width: 220px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
         }
     }
 
+    .social-bar .social-bar-content {
+        .social-bar-content-icons {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .social-bar-content-text {
+            margin-left: 10px;
+        }
+    }
+
+    .about-us .about-us-content .about-us-content-video img {
+        width: 100%;
+    }
+
+    .clients .clients-brands {
+        flex-wrap: wrap;
+    }
+    
+    .footer footer {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        .footer-social {
+            margin: 50px 5px;
+        }
+        .footer-text {
+            margin: 20px 10px 0 10px;
+            height: 100%;
+        }
+        .footer-subscribe {
+            margin: 50px 5px 5px 0;
+        }
+    }
+
+    .map .map-address-box {
+        padding: 30px;
+        min-height: 350px;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 550px) {
+   .facts .facts-content {
+        .facts-content-item {
+            width: 100%;
+        }
+    } 
+}
+
+@media screen and (max-width: 425px) {
+    .hero {
+        .hero-content {
+            padding-top: 55%;
+            .hero-content-main-text {
+                font-size: 2.3rem;
+                h1 {
+                    font-size: 2.8rem;
+                    width: 220px;
+                    text-align: center;
+                    margin: 0 auto;
+                }
+            }
+        }
+        .navbar .navbar-container {
+            .navbar-list {
+                height: 100vh;
+                overflow-y: scroll;
+            }
+            .navbar-list > li {
+                height: 80px;
+                width: 100%;
+            }
+            .navbar-list > li a {
+                font-size: 32px;
+            }
+        }
+    }
+    
+    .services .services-content {
+        flex-wrap: wrap;
+    }
+    .services .services-content [class^='item'] {
+        border: none;
+        width: 100%;
+        &:nth-child(1) {
+            border-right: none;
+        }
+        &:nth-child(2) {
+            border-top: none;
+        }
+        &:nth-child(3) {
+            border-right: none;
+        }
+        &:nth-child(4) {
+            border-top: 1px solid rgba(190, 190, 190, 0.5);
+        }
+    }
+
+    .our-projects .our-projects-list li {
+        padding: 0 3px;
+    }
+    
+    .our-team .our-team-content {
+        
+    }
+    
+    .pricing .pricing-content {
+        flex-wrap: wrap;
+        padding: 50px;
+        .pricing-option {
+            margin: 5px auto;
+            width: 100%;
+        }
+    }
+    
     .social-bar .social-bar-content {
         .social-bar-content-icons {
             flex-wrap: wrap;
@@ -1586,30 +1674,29 @@ $font: 'Montserrat', sans-serif;
         }
     }
 
-    .map .map-address-box {
-        padding: 30px;
-        min-height: 350px;
-        top: 0;
-        left: 0;
-        display: flex;
-        width: 100%;
-        margin: 0 auto;
-        height: 300px;
-        position: relative;
+    .premium .premium-content .premium-content-text h3::before {
+        left: -40px;
     }
+}
 
-    .footer footer {
-        flex-wrap: wrap-reverse;
-        justify-content: center;
-        .footer-social {
-            margin: 50px 5px;
+@media screen and (max-width: 375px) {
+    .hero .navbar .navbar-container .navbar-list > li {
+        height: 70px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .hero {
+        .hero-content .hero-content-main-text {
+            font-size: 2rem;
         }
-        .footer-text {
-            margin: 20px 10px 0 10px;
-            height: 100%;
-        }
-        .footer-subscribe {
-            margin: 50px 5px 5px 0;
+        .navbar .navbar-container .navbar-list {
+            top: 100px;
+            right: 0;
+            position: absolute;
+            height: 100vh;
+            overflow-y: scroll;
         }
     }
 }
