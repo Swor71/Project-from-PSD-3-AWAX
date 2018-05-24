@@ -635,13 +635,32 @@ table {
 }
 
 .our-team .our-team-content {
-  padding-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  position: relative;
+  height: 580px;
+  top: -50px;
+  left: 0;
+  right: 0;
 }
 
-.our-team .our-team-content .our-team-profile {
+.our-team .our-team-content .profile-carousel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  height: 580px;
+  max-width: 992px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.our-team .our-team-content .profile-carousel .profile-item {
+  position: absolute;
+  height: 430px;
+  width: 350px;
+}
+
+.our-team .our-team-content .profile-carousel .profile-item .our-team-profile {
+  position: absolute;
   display: grid;
   grid-template-areas: "pic" "text" "social";
   grid-template-rows: 60% 15% 25%;
@@ -653,13 +672,13 @@ table {
   margin: 2px;
 }
 
-.our-team .our-team-content .our-team-profile .profile-pic {
+.our-team .our-team-content .profile-carousel .profile-item .our-team-profile .profile-pic {
   grid-area: "pic";
   margin: 0 auto;
   align-self: center;
 }
 
-.our-team .our-team-content .our-team-profile .our-team-profile-text {
+.our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-text {
   grid-area: "text";
   color: #242424;
   font-family: "Montserrat", sans-serif;
@@ -668,20 +687,20 @@ table {
   align-self: center;
 }
 
-.our-team .our-team-content .our-team-profile .our-team-profile-text h2 {
+.our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-text h2 {
   font-size: 21px;
   font-weight: 600;
   text-transform: uppercase;
   line-height: 21px;
 }
 
-.our-team .our-team-content .our-team-profile .our-team-profile-text span {
+.our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-text span {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
 }
 
-.our-team .our-team-content .our-team-profile .our-team-profile-social {
+.our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-social {
   grid-area: "social";
   color: #fff;
   justify-self: center;
@@ -689,7 +708,7 @@ table {
   text-align: center;
 }
 
-.our-team .our-team-content .our-team-profile .our-team-profile-social .fab, .our-team .our-team-content .our-team-profile .our-team-profile-social .fas {
+.our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-social .fab, .our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-social .fas {
   width: 32px;
   height: 32px;
   background-color: #bebebe;
@@ -700,13 +719,35 @@ table {
   transition: .4s;
 }
 
-.our-team .our-team-content .our-team-profile .our-team-profile-social .fab:hover, .our-team .our-team-content .our-team-profile .our-team-profile-social .fas:hover {
+.our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-social .fab:hover, .our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-social .fas:hover {
   background-color: #b88b58;
   cursor: pointer;
 }
 
-.our-team .our-team-content .our-team-profile .our-team-profile-social .fab:nth-child(1), .our-team .our-team-content .our-team-profile .our-team-profile-social .fas:nth-child(1) {
+.our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-social .fab:nth-child(1), .our-team .our-team-content .profile-carousel .profile-item .our-team-profile .our-team-profile-social .fas:nth-child(1) {
   margin-left: 0;
+}
+
+.our-team .our-team-content .controls {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 150px;
+  margin-left: -75px;
+}
+
+.our-team .our-team-content .controls a {
+  color: #b88b58;
+  display: block;
+  text-decoration: none;
+}
+
+.our-team .our-team-content .controls .previous {
+  float: left;
+}
+
+.our-team .our-team-content .controls .next {
+  float: right;
 }
 
 .clients {

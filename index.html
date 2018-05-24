@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Awax</title>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
-        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="./vendor/circular-carousel/jquery.circular-carousel.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -253,14 +253,17 @@
                 <h2>our team</h2>
                 <span>our co-workers</span>
             </header>
-            <div class="our-team-content">
-                <div class="our-team-profile">
-                    <img class="profile-pic" src="./images/team/team-profile-1.png" alt="profile-picture">
-                    <div class="our-team-profile-text">
+        </div>
+        <div class="our-team-content">
+            <ul class="profile-carousel">
+                <li class="profile-item">
+                    <div class="our-team-profile">
+                        <img class="profile-pic" src="./images/team/team-profile-1.png" alt="profile-picture">
+                        <div class="our-team-profile-text">
                         <h2>jane doe</h2>
                         <span>Master mind</span>
-                    </div>
-                    <div class="our-team-profile-social">
+                        </div>
+                        <div class="our-team-profile-social">
                         <i class="fab fa-twitter fa-sm" title="Twitter"></i>
                         <i class="fab fa-instagram" title="Instagram"></i>
                         <i class="fab fa-linkedin-in" title="LinkedIn"></i>
@@ -268,40 +271,53 @@
                         <i class="fab fa-youtube" title="Youtube"></i>
                         <i class="fab fa-google-plus-g" title="Google plus"></i>
                         <i class="fas fa-ellipsis-h" title="Ellipsis"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="our-team-profile">
-                    <img class="profile-pic" src="./images/team/team-profile-2.png" alt="profile-picture">
-                    <div class="our-team-profile-text">
-                        <h2>mike shiller</h2>
-                        <span>Creative head</span>
+                </li>
+                <li class="profile-item">
+                    <div class="our-team-profile">
+                        <img class="profile-pic" src="./images/team/team-profile-2.png" alt="profile-picture">
+                        <div class="our-team-profile-text">
+                            <h2>mike shiller</h2>
+                            <span>Creative head</span>
+                        </div>
+                        <div class="our-team-profile-social">
+                            <i class="fab fa-twitter fa-sm" title="Twitter"></i>
+                            <i class="fab fa-instagram" title="Instagram"></i>
+                            <i class="fab fa-linkedin-in" title="LinkedIn"></i>
+                            <i class="fab fa-facebook-f fa-sm" title="Facebook"></i>
+                            <i class="fab fa-youtube" title="Youtube"></i>
+                            <i class="fab fa-google-plus-g" title="Google plus"></i>
+                            <i class="fas fa-ellipsis-h" title="Ellipsis"></i>
+                        </div>
                     </div>
-                    <div class="our-team-profile-social">
-                        <i class="fab fa-twitter fa-sm" title="Twitter"></i>
-                        <i class="fab fa-instagram" title="Instagram"></i>
-                        <i class="fab fa-linkedin-in" title="LinkedIn"></i>
-                        <i class="fab fa-facebook-f fa-sm" title="Facebook"></i>
-                        <i class="fab fa-youtube" title="Youtube"></i>
-                        <i class="fab fa-google-plus-g" title="Google plus"></i>
-                        <i class="fas fa-ellipsis-h" title="Ellipsis"></i>
+                </li>
+                <li class="profile-item">
+                    <div class="our-team-profile">
+                        <img class="profile-pic" src="./images/team/team-profile-3.png" alt="profile-picture">
+                        <div class="our-team-profile-text">
+                            <h2>anna johns</h2>
+                            <span>Technical lead</span>
+                        </div>
+                        <div class="our-team-profile-social">
+                            <i class="fab fa-twitter fa-sm" title="Twitter"></i>
+                            <i class="fab fa-instagram" title="Instagram"></i>
+                            <i class="fab fa-linkedin-in" title="LinkedIn"></i>
+                            <i class="fab fa-facebook-f fa-sm" title="Facebook"></i>
+                            <i class="fab fa-youtube" title="Youtube"></i>
+                            <i class="fab fa-google-plus-g" title="Google plus"></i>
+                            <i class="fas fa-ellipsis-h" title="Ellipsis"></i>
+                        </div>
                     </div>
-                </div>
-                <div class="our-team-profile">
-                    <img class="profile-pic" src="./images/team/team-profile-3.png" alt="profile-picture">
-                    <div class="our-team-profile-text">
-                        <h2>anna johns</h2>
-                        <span>Technical lead</span>
-                    </div>
-                    <div class="our-team-profile-social">
-                        <i class="fab fa-twitter fa-sm" title="Twitter"></i>
-                        <i class="fab fa-instagram" title="Instagram"></i>
-                        <i class="fab fa-linkedin-in" title="LinkedIn"></i>
-                        <i class="fab fa-facebook-f fa-sm" title="Facebook"></i>
-                        <i class="fab fa-youtube" title="Youtube"></i>
-                        <i class="fab fa-google-plus-g" title="Google plus"></i>
-                        <i class="fas fa-ellipsis-h" title="Ellipsis"></i>
-                    </div>
-                </div>
+                </li>
+            </ul>
+            <div class="controls">
+                <a href="#" class="previous">
+                    <i class="fa fa-chevron-left fa-2x" aria-hidden="true"></i>
+                </a>
+                <a href="#" class="next">
+                    <i class="fa fa-chevron-right fa-2x" aria-hidden="true"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -554,6 +570,7 @@
     </section>
     <script type="text/javascript" src="./vendor/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./vendor/circular-carousel/jquery.circular-carousel.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAybpMpkeupTwstjlNUCwz4fJdQb64BW2U&callback=initMap">
     </script>
     <script src="./js/index.js"></script>
