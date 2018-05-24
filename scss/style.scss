@@ -69,6 +69,12 @@ $font: 'Montserrat', sans-serif;
     box-sizing: border-box;
 }
 
+.slick-track,
+.slick-list {
+    -webkit-perspective: 2000;
+    -webkit-backface-visibility: hidden;
+}
+
 .hero {
     height: 850px;
     width: 100%;
@@ -575,7 +581,8 @@ $font: 'Montserrat', sans-serif;
             "text"
             "social";
             grid-template-rows: 60% 15% 25%;
-            width: 350px;
+            max-width: 350px;
+            width: 100%;
             height: 430px;
             background-color: #fff;
             border-radius: 4px;
@@ -736,7 +743,7 @@ $font: 'Montserrat', sans-serif;
             border-radius: 4px;
             font-family: $font;
             transition: .4s;
-            margin: 0 2px;
+            margin: 2px;
             &:hover {
                 transform: translateY(-3px);
                 box-shadow: 2px 2px 8px rgba(#000, .5);
@@ -805,7 +812,7 @@ $font: 'Montserrat', sans-serif;
                 font-size: 12px;
                 font-weight: 700;
                 line-height: 18px;
-                transition: .4s;
+                transition: background-color 0.4s;
                 &:hover {
                     background-color: $main-brown;
                     cursor: pointer;
@@ -1180,27 +1187,26 @@ $font: 'Montserrat', sans-serif;
     color: #7e7e7e;
     border-top: 1px solid #cfcfcf;
     position: relative;
-    &::before {
-        content: '';
-        width: 64px;
-        height: 64px;
-        box-shadow: 0 3px 8px rgba(0, 0, 1, 0.24);
-        background-color: #b88b58;
-        position: absolute;
-        border-radius: 50%;
-        top: -32px;
-        left: 100px;
-        background-image: url(../images/scrollup.png);
-        background-repeat: no-repeat;
-        background-position: 50% 50%;
-        cursor: pointer;
-    }
     footer {
         min-height: 264px;
         font-family: $font;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .to-top {
+            width: 64px;
+            height: 64px;
+            box-shadow: 0 3px 8px rgba(0, 0, 1, 0.24);
+            background-color: #b88b58;
+            position: absolute;
+            border-radius: 50%;
+            top: -32px;
+            left: 100px;
+            background-image: url(../images/scrollup.png);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+            cursor: pointer;
+        }
         .footer-social {
             max-width: 350px;
             width: 100%;
@@ -1208,6 +1214,7 @@ $font: 'Montserrat', sans-serif;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            padding-top: 5px;
             margin: 0 5px;
             .footer-social-icons {
                 display: flex;
@@ -1298,6 +1305,12 @@ $font: 'Montserrat', sans-serif;
     }
 }
 
+@media screen and (max-width: 1062px) {
+    .our-team .our-team-content {
+        justify-content: space-around;
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .hero .hero-content {
         padding-top: 25%;
@@ -1332,17 +1345,71 @@ $font: 'Montserrat', sans-serif;
             display: block;
         }
     }
+    
+    .pricing .pricing-content {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-bottom: 50px;
+        .pricing-option {
+            width: 33%;
+        }
+    }
+
     .footer footer .footer-text {
         margin: 0 10px;
         overflow-y: scroll;
     }  
 }
 
-
 @media screen and (max-width: 768px) {
     .hero .hero-content {
         padding-top: 35%;
     }
+
+    .our-projects .our-projects-list {
+        display: none;
+    }
+
+    .our-team-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .services .services-content {
+        flex-wrap: wrap;
+    }
+    .services .services-content [class^='item'] {
+        border: none;
+        border-collapse: collapse;
+        width: 50%;
+        // border-top: 1px solid rgba(190, 190, 190, 0.5);
+        &:nth-child(1) {
+            border-bottom: 1px solid rgba(190, 190, 190, 0.5);
+            border-right: 1px solid rgba(190, 190, 190, 0.5);
+            border-left: none;
+        }
+        &:nth-child(2) {
+            border-bottom: 1px solid rgba(190, 190, 190, 0.5);
+        }
+        &:nth-child(3) {
+            border-right: 1px solid rgba(190, 190, 190, 0.5);
+
+        }
+        &:nth-child(4) {
+            border-right: none;
+        }
+    }
+
+    .services .services-content [class^='item'] span {
+        color: #7e7e7e;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 18px;
+        margin: 0 auto;
+        width: 80%;
+        padding: 2px;
+    }
+
     .about-us .about-us-content .about-us-content-text {
         color: #242424;
         font-size: 14px;
@@ -1423,6 +1490,7 @@ $font: 'Montserrat', sans-serif;
         padding: 50px;
         .pricing-option {
             margin: 5px auto;
+            width: 80%;
         }
     }
 

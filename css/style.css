@@ -67,6 +67,12 @@ table {
   box-sizing: border-box;
 }
 
+.slick-track,
+.slick-list {
+  -webkit-perspective: 2000;
+  -webkit-backface-visibility: hidden;
+}
+
 .hero {
   height: 850px;
   width: 100%;
@@ -639,7 +645,8 @@ table {
   display: grid;
   grid-template-areas: "pic" "text" "social";
   grid-template-rows: 60% 15% 25%;
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   height: 430px;
   background-color: #fff;
   border-radius: 4px;
@@ -824,7 +831,7 @@ table {
   border-radius: 4px;
   font-family: "Montserrat", sans-serif;
   transition: .4s;
-  margin: 0 2px;
+  margin: 2px;
 }
 
 .pricing .pricing-content .pricing-option:hover {
@@ -901,7 +908,7 @@ table {
   font-size: 12px;
   font-weight: 700;
   line-height: 18px;
-  transition: .4s;
+  transition: background-color 0.4s;
 }
 
 .pricing .pricing-content .pricing-option .pricing-option-btn:hover {
@@ -1322,8 +1329,15 @@ table {
   position: relative;
 }
 
-.footer::before {
-  content: '';
+.footer footer {
+  min-height: 264px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer footer .to-top {
   width: 64px;
   height: 64px;
   box-shadow: 0 3px 8px rgba(0, 0, 1, 0.24);
@@ -1338,14 +1352,6 @@ table {
   cursor: pointer;
 }
 
-.footer footer {
-  min-height: 264px;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .footer footer .footer-social {
   max-width: 350px;
   width: 100%;
@@ -1353,6 +1359,7 @@ table {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-top: 5px;
   margin: 0 5px;
 }
 
@@ -1450,6 +1457,12 @@ table {
   }
 }
 
+@media screen and (max-width: 1062px) {
+  .our-team .our-team-content {
+    justify-content: space-around;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .hero .hero-content {
     padding-top: 25%;
@@ -1481,6 +1494,14 @@ table {
   .hero .navbar .navbar-container .toggle-menu {
     display: block;
   }
+  .pricing .pricing-content {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 50px;
+  }
+  .pricing .pricing-content .pricing-option {
+    width: 33%;
+  }
   .footer footer .footer-text {
     margin: 0 10px;
     overflow-y: scroll;
@@ -1490,6 +1511,44 @@ table {
 @media screen and (max-width: 768px) {
   .hero .hero-content {
     padding-top: 35%;
+  }
+  .our-projects .our-projects-list {
+    display: none;
+  }
+  .our-team-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .services .services-content {
+    flex-wrap: wrap;
+  }
+  .services .services-content [class^='item'] {
+    border: none;
+    border-collapse: collapse;
+    width: 50%;
+  }
+  .services .services-content [class^='item']:nth-child(1) {
+    border-bottom: 1px solid rgba(190, 190, 190, 0.5);
+    border-right: 1px solid rgba(190, 190, 190, 0.5);
+    border-left: none;
+  }
+  .services .services-content [class^='item']:nth-child(2) {
+    border-bottom: 1px solid rgba(190, 190, 190, 0.5);
+  }
+  .services .services-content [class^='item']:nth-child(3) {
+    border-right: 1px solid rgba(190, 190, 190, 0.5);
+  }
+  .services .services-content [class^='item']:nth-child(4) {
+    border-right: none;
+  }
+  .services .services-content [class^='item'] span {
+    color: #7e7e7e;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0 auto;
+    width: 80%;
+    padding: 2px;
   }
   .about-us .about-us-content .about-us-content-text {
     color: #242424;
@@ -1562,6 +1621,7 @@ table {
   }
   .pricing .pricing-content .pricing-option {
     margin: 5px auto;
+    width: 80%;
   }
   .premium {
     min-height: 956px;

@@ -1,10 +1,18 @@
-$(document).ready(function () {
-    $(".carousel").slick({ 
-        autoplay: true,
-        arrows: false,
-        dots: true,
-        autoplaySpeed: 3500,
+$(function () {
+  $('#menu-icon').click(function () {
+    $("#navbar-list").toggle(400, function () {
+      $(this).toggleClass('toggle-menu').css('display', '');
     });
+  })
+
+  $(".carousel").slick({ 
+      autoplay: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      autoplaySpeed: 3500
+  });
 });
 
 function initMap() {
@@ -18,11 +26,3 @@ function initMap() {
     map: map
   });
 }
-
-$(document).ready(function() {
-  $('#menu-icon').click(function() {
-    $("#navbar-list").toggle(400, function() {
-      $(this).toggleClass('toggle-menu').css('display', '');
-    });
-  })
-})
