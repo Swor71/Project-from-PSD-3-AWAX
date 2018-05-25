@@ -677,7 +677,7 @@ $font: 'Montserrat', sans-serif;
 .clients {
     min-height: 820px;
     .clients-header {
-        padding-top: 60px;
+        padding: 50px 0;
         font-family: $font;
         text-transform: uppercase;
         text-align: center;
@@ -694,46 +694,65 @@ $font: 'Montserrat', sans-serif;
             font-weight: 600;
         }
     }
-    .clients-content {
-        padding-top: 80px;
+    .client-swiper-container {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        .clients-profile-picture {
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #000000;
-            font-family: $font;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 18px;
-            margin-bottom: 15px;
-        }
-        h3 {
-            color: #000000;
-            font-family: $font;
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 18px;
-            margin-bottom: 30px;
-        }
-        .clients-quotes {
-            margin-bottom: 20px;
-        }
-        p {
-            max-width: 730px;
-            width: 100%;
-            text-align: center;
-            color: #7e7e7e;
-            font-family: $font;
-            font-size: 14px;
-            font-weight: 300;
-            line-height: 25px;
-            margin-bottom: 100px;
+        justify-content: center;
+        margin: 0 auto;
+        height: 100%;
+        max-width: 500px;
+        width: 100%;
+        .swiper-wrapper {
+            .swiper-slide {
+                border: 1px solid rgba(#777, .12);
+                border-radius: 6px;
+                display: flex;
+                justify-content: center;
+                .clients-content {
+                    max-width: 300px;
+                    width: 100%;
+                    padding-top: 80px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .clients-profile-picture {
+                        margin-bottom: 30px;
+                    }
+                    h2 {
+                        color: #000000;
+                        font-family: $font;
+                        font-size: 24px;
+                        font-weight: 700;
+                        line-height: 18px;
+                        margin-bottom: 15px;
+                    }
+                    h3 {
+                        color: #000000;
+                        font-family: $font;
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 18px;
+                        margin-bottom: 30px;
+                    }
+                    .clients-quotes {
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        max-width: 730px;
+                        width: 100%;
+                        text-align: center;
+                        color: #7e7e7e;
+                        font-family: $font;
+                        font-size: 14px;
+                        font-weight: 300;
+                        line-height: 25px;
+                        margin-bottom: 100px;
+                    }
+                }
+            }
         }
     }
     .clients-brands {
+        margin-top: 50px;
         display: flex;
         justify-content: space-around;
         border-top: 2px solid rgba(#cfcfcf, .6);
@@ -1389,6 +1408,10 @@ $font: 'Montserrat', sans-serif;
         }
     }
 
+    .facts .facts-content .facts-content-item:hover > h1 {
+        transform: scale(1);
+    }
+
     .footer footer .footer-text {
         margin: 0 10px;
         overflow-y: scroll;
@@ -1512,6 +1535,18 @@ $font: 'Montserrat', sans-serif;
             margin: 50px auto;
         }
     }
+
+    .map .map-address-box {
+        padding: 30px;
+        min-height: 350px;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        margin: 0 auto;
+        height: 300px;
+        position: relative;
+    }
 }
 
 @media screen and (max-width: 680px) {
@@ -1561,18 +1596,6 @@ $font: 'Montserrat', sans-serif;
         .footer-subscribe {
             margin: 50px 5px 5px 0;
         }
-    }
-
-    .map .map-address-box {
-        padding: 30px;
-        min-height: 350px;
-        top: 0;
-        left: 0;
-        display: flex;
-        width: 100%;
-        margin: 0 auto;
-        height: 300px;
-        position: relative;
     }
 }
 

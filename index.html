@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
     <link rel="stylesheet" href="./vendor/circular-carousel/jquery.circular-carousel.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -327,13 +328,44 @@
                 <h2>happy clients</h2>
                 <span>client reviews</span>
             </header>
-            <div class="clients-content">
-                <img class="clients-profile-picture" src="./images/clients/img-client.png" alt="client-picture">
-                <h2>John Doe</h2>
-                <h3>Head of PR Departament</h3>
-                <img class="clients-quotes" src="./images/clients/quotes.png" alt="quotes-sign">
-                <p>Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel fermentum ipsum. Nulla at facilisis est, vel condimentum
-                ligula. consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis purus</p>
+            <div class="client-swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="clients-content">
+                            <img class="clients-profile-picture" src="./images/team/team-profile-1.png" alt="client-picture">
+                            <h2>Jane Doe</h2>
+                            <h3>Head of PR Departament</h3>
+                            <img class="clients-quotes" src="./images/clients/quotes.png" alt="quotes-sign">
+                            <p>Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel fermentum ipsum. Nulla at facilisis est, vel
+                                condimentum ligula. consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis
+                                purus</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="clients-content">
+                            <img class="clients-profile-picture" src="./images/team/team-profile-3.png" alt="client-picture">
+                            <h2>Anna Johns</h2>
+                            <h3>Technical lead</h3>
+                            <img class="clients-quotes" src="./images/clients/quotes.png" alt="quotes-sign">
+                            <p>Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel fermentum ipsum. Nulla at facilisis est, vel
+                                condimentum ligula. consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis
+                                purus</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide"><div class="clients-content">
+                        <img class="clients-profile-picture" src="./images/team/team-profile-2.png" alt="client-picture">
+                        <h2>Mike Shiller</h2>
+                        <h3>creative head</h3>
+                        <img class="clients-quotes" src="./images/clients/quotes.png" alt="quotes-sign">
+                        <p>Praesent metus urna, feugiat a placerat vel, elementum at leo. Quisque vel fermentum ipsum. Nulla at facilisis est, vel
+                            condimentum ligula. consectetur. Fusce sed purus eros. Vivamus rhoncus, ipsum in tempus fermentum, orci leo facilisis
+                            purus</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </div>
         <div class="clients-brands">
@@ -568,11 +600,13 @@
             </div>
         </footer>
     </section>
+    
     <script type="text/javascript" src="./vendor/jquery.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./vendor/circular-carousel/jquery.circular-carousel.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAybpMpkeupTwstjlNUCwz4fJdQb64BW2U&callback=initMap">
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.6/js/swiper.js"></script>
     <script src="./js/index.js"></script>
 </body>
 

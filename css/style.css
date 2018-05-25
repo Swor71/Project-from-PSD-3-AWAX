@@ -755,7 +755,7 @@ table {
 }
 
 .clients .clients-header {
-  padding-top: 60px;
+  padding: 50px 0;
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   text-align: center;
@@ -775,18 +775,36 @@ table {
   font-weight: 600;
 }
 
-.clients .clients-content {
+.clients .client-swiper-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 500px;
+  width: 100%;
+}
+
+.clients .client-swiper-container .swiper-wrapper .swiper-slide {
+  border: 1px solid rgba(119, 119, 119, 0.12);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+}
+
+.clients .client-swiper-container .swiper-wrapper .swiper-slide .clients-content {
+  max-width: 300px;
+  width: 100%;
   padding-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.clients .clients-content .clients-profile-picture {
+.clients .client-swiper-container .swiper-wrapper .swiper-slide .clients-content .clients-profile-picture {
   margin-bottom: 30px;
 }
 
-.clients .clients-content h2 {
+.clients .client-swiper-container .swiper-wrapper .swiper-slide .clients-content h2 {
   color: #000000;
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
@@ -795,7 +813,7 @@ table {
   margin-bottom: 15px;
 }
 
-.clients .clients-content h3 {
+.clients .client-swiper-container .swiper-wrapper .swiper-slide .clients-content h3 {
   color: #000000;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
@@ -804,11 +822,11 @@ table {
   margin-bottom: 30px;
 }
 
-.clients .clients-content .clients-quotes {
+.clients .client-swiper-container .swiper-wrapper .swiper-slide .clients-content .clients-quotes {
   margin-bottom: 20px;
 }
 
-.clients .clients-content p {
+.clients .client-swiper-container .swiper-wrapper .swiper-slide .clients-content p {
   max-width: 730px;
   width: 100%;
   text-align: center;
@@ -821,6 +839,7 @@ table {
 }
 
 .clients .clients-brands {
+  margin-top: 50px;
   display: flex;
   justify-content: space-around;
   border-top: 2px solid rgba(207, 207, 207, 0.6);
@@ -1537,6 +1556,9 @@ table {
   .pricing .pricing-content .pricing-option {
     width: 33%;
   }
+  .facts .facts-content .facts-content-item:hover > h1 {
+    transform: scale(1);
+  }
   .footer footer .footer-text {
     margin: 0 10px;
     overflow-y: scroll;
@@ -1648,6 +1670,17 @@ table {
   .premium .premium-btn {
     margin: 50px auto;
   }
+  .map .map-address-box {
+    padding: 30px;
+    min-height: 350px;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -1689,17 +1722,6 @@ table {
   }
   .footer footer .footer-subscribe {
     margin: 50px 5px 5px 0;
-  }
-  .map .map-address-box {
-    padding: 30px;
-    min-height: 350px;
-    top: 0;
-    left: 0;
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-    height: 300px;
-    position: relative;
   }
 }
 

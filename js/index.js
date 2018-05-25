@@ -14,6 +14,19 @@ function initMap() {
 
   $(document).ready(function () {
 
+    var mySwiper = new Swiper(".client-swiper-container", {
+      effect: "flip",
+      grabCursor: true,
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination"
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+      }
+    });
+
     $('#menu-icon').click(function () {
       $("#navbar-list").toggle(400, function () {
         $(this).toggleClass('toggle-menu').css('display', '');
