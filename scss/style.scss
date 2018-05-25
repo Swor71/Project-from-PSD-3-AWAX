@@ -182,9 +182,6 @@ $font: 'Montserrat', sans-serif;
                 display: none;
                 cursor: pointer;
             }
-            .toggle-menu {
-
-            }
         }
     }
 
@@ -677,7 +674,7 @@ $font: 'Montserrat', sans-serif;
 .clients {
     min-height: 820px;
     .clients-header {
-        padding: 50px 0;
+        padding-top: 50px;
         font-family: $font;
         text-transform: uppercase;
         text-align: center;
@@ -703,8 +700,6 @@ $font: 'Montserrat', sans-serif;
         width: 100%;
         .swiper-wrapper {
             .swiper-slide {
-                border: 1px solid rgba(#777, .12);
-                border-radius: 6px;
                 display: flex;
                 justify-content: center;
                 .clients-content {
@@ -1360,8 +1355,7 @@ $font: 'Montserrat', sans-serif;
 }
 
 @media screen and (max-width: 1062px) {
-    .our-team .our-team-content {
-    }
+    
 }
 
 @media screen and (max-width: 1024px) {
@@ -1658,10 +1652,6 @@ $font: 'Montserrat', sans-serif;
 
     .our-projects .our-projects-list li {
         padding: 0 3px;
-    }
-    
-    .our-team .our-team-content {
-        
     }
     
     .pricing .pricing-content {
