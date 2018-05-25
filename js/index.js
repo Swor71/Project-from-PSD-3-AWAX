@@ -14,10 +14,11 @@ function initMap() {
 
   $(document).ready(function () {
 
-    var mySwiper = new Swiper(".client-swiper-container", {
+    var clientSwiper = new Swiper(".client-swiper-container", {
       effect: "flip",
       grabCursor: true,
       loop: true,
+      speed: 400,
       pagination: {
         el: ".swiper-pagination"
       },
@@ -25,6 +26,24 @@ function initMap() {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev"
       }
+    });
+
+    var teamSwiper = new Swiper('.team-swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: false,
+      slidesPerView: 'auto',
+      initialSlide: 1,
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
     });
 
     $('#menu-icon').click(function () {
