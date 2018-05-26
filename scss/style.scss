@@ -73,56 +73,49 @@ $font: 'Montserrat', sans-serif;
     height: 850px;
     width: 100%;
     position: relative;
-    .carousel {
-        height: 850px;
-        position: relative;
-        top: 0;
-        .item1 {
-            height: 850px;
-            background-repeat: no-repeat;
-            background-image: url(../images/hero/hero-bg1.png);
-            background-size: cover;  
-        }
-        .item2 {
-            height: 850px;
-            background-image: url(../images/hero/hero-bg2.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .item3 {
-            height: 850px;
-            background-image: url(../images/hero/hero-bg3.jpg);
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .slick-dots {
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            bottom: 50px;
-            left: 0;
-            right: 0;
-            .slick-active {
-                background-color: $main-brown;
-                border-radius: 50%;
+    .hero-swiper-container {
+        overflow: hidden;
+        width: 100%;
+        .swiper-wrapper {
+            width: 100%;
+            .swiper-slide {
+                width: 100%;
+                .item1 {
+                    height: 850px;
+                    background-repeat: no-repeat;
+                    background-image: url(../images/hero/hero-bg1.png);
+                    background-size: cover;  
+                }
+                .item2 {
+                    height: 850px;
+                    background-image: url(../images/hero/hero-bg2.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+                .item3 {
+                    height: 850px;
+                    background-image: url(../images/hero/hero-bg3.jpg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
             }
-            li {
-                margin-left: 10px;
-                width: 16px;
-                height: 16px;
-                &:nth-child(1) {
-                    margin-left: 0;
-                }
-                button {
-                    width: 16px;
-                    height: 16px;
-                    border: 2px solid $main-brown;
-                    border-radius: 50%;
-                    background: transparent;
-                    color: transparent;
-                    cursor: pointer;
-                    outline: none;
-                }
+        }
+        .swiper-pagination {
+            margin-bottom: 50px;
+            .swiper-pagination-bullet {
+                height: 12px;
+                width: 12px;
+                background: transparent;
+                opacity: 1;
+                border: 1px solid $main-brown;
+                vertical-align: middle;
+            }
+            .swiper-pagination-bullet-active {
+                opacity: 1;
+                height: 14px;
+                width: 14px;
+                vertical-align: middle;
+                background: $main-brown;
             }
         }
     }
@@ -178,7 +171,6 @@ $font: 'Montserrat', sans-serif;
             }
         }
     }
-
     .hero-content {
         padding-top: 15%;
         display: flex;
@@ -238,6 +230,7 @@ $font: 'Montserrat', sans-serif;
         bottom: -30px;
         right: 85px;
         cursor: pointer;
+        z-index: 10;
     }
 }
 
@@ -652,11 +645,19 @@ $font: 'Montserrat', sans-serif;
             }
             .swiper-pagination {
                 .swiper-pagination-bullet {
-                    border: 1px solid white;
+                    height: 10px;
+                    width: 10px;
+                    background: transparent;
                     opacity: 1;
+                    border: 1px solid $main-brown;
+                    vertical-align: middle;
                 }
                 .swiper-pagination-bullet-active {
-                    background: #b88b58;
+                    opacity: 1;
+                    height: 12px;
+                    width: 12px;
+                    vertical-align: middle;
+                    background: $main-brown;
                 }
             }
         }
@@ -737,13 +738,22 @@ $font: 'Montserrat', sans-serif;
                 }
             }
         }
-        .swiper-pagination-bullet {
-            background: transparent;
-            border: 1px solid $main-brown;
-            opacity: 1;
-        }
-        .swiper-pagination-bullet-active {
-            background: $main-brown;
+        .swiper-pagination {
+            .swiper-pagination-bullet {
+                height: 10px;
+                width: 10px;
+                background: transparent;
+                opacity: 1;
+                border: 1px solid $main-brown;
+                vertical-align: middle;
+            }
+            .swiper-pagination-bullet-active {
+                opacity: 1;
+                height: 12px;
+                width: 12px;
+                vertical-align: middle;
+                background: $main-brown;
+            }
         }
     }
     .clients-brands {
