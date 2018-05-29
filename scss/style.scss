@@ -215,6 +215,12 @@ $font: 'Montserrat', sans-serif;
             text-transform: uppercase;
             margin-top: 50px;
             cursor: pointer;
+            transition: .4s;
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 2px 2px 6px rgba(#000, .5);
+                background-color: darken($main-brown, 5%);
+            }
         }
     }
     &::after {
@@ -279,6 +285,12 @@ $font: 'Montserrat', sans-serif;
             text-transform: uppercase;
             margin-top: 35px;
             cursor: pointer;
+            transition: .4s;
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 2px 2px 6px rgba(#000, .5);
+                    background-color: darken($main-brown, 5%);
+                }
             }
         }
         .about-us-content-video {
@@ -530,6 +542,12 @@ $font: 'Montserrat', sans-serif;
         text-transform: uppercase;
         border: none;
         cursor: pointer;
+        transition: .4s;
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 2px 2px 6px rgba(#000, .5);
+            background-color: darken($main-brown, 5%);
+        }
     }
 }
 
@@ -967,6 +985,12 @@ $font: 'Montserrat', sans-serif;
         margin: 0 auto;
         margin-top: 50px;
         cursor: pointer;
+        transition: .4s;
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 2px 2px 6px rgba(#000, .5);
+            background-color: darken($main-brown, 5%);
+        }
     }
 }
 
@@ -1183,8 +1207,12 @@ $font: 'Montserrat', sans-serif;
         text-transform: uppercase;
         margin: 50px auto 0 auto;
         display: block;
+        cursor: pointer;
+        transition: .4s;
         &:hover {
-            cursor: pointer;
+            transform: translateY(-2px);
+            box-shadow: 2px 2px 6px rgba(#000, .5);
+            background-color: darken($main-brown, 5%);
         }
     }
 }
@@ -1265,6 +1293,12 @@ $font: 'Montserrat', sans-serif;
             background-repeat: no-repeat;
             background-position: 50% 50%;
             cursor: pointer;
+            transition: .4s;
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 2px 2px 6px rgba(#000, .5);
+                background-color: darken($main-brown, 5%);
+            }
         }
         .footer-social {
             max-width: 350px;
@@ -1352,6 +1386,12 @@ $font: 'Montserrat', sans-serif;
                 text-transform: uppercase;
                 margin: 0 auto;
                 cursor: pointer;
+                transition: .4s;
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 2px 2px 6px rgba(#000, .5);
+                    background-color: darken($main-brown, 5%);
+                }
             }
         }
     }

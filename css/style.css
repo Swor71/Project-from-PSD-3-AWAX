@@ -237,6 +237,13 @@ table {
   text-transform: uppercase;
   margin-top: 50px;
   cursor: pointer;
+  transition: .4s;
+}
+
+.hero .hero-content .hero-content-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: #ad7e4a;
 }
 
 .hero::after {
@@ -309,6 +316,13 @@ table {
   text-transform: uppercase;
   margin-top: 35px;
   cursor: pointer;
+  transition: .4s;
+}
+
+.about-us .about-us-content .about-us-content-text .about-us-content-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: #ad7e4a;
 }
 
 .about-us .about-us-content .about-us-content-video {
@@ -595,6 +609,13 @@ table {
   text-transform: uppercase;
   border: none;
   cursor: pointer;
+  transition: .4s;
+}
+
+.our-projects .our-projects-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: #ad7e4a;
 }
 
 .our-team {
@@ -1080,6 +1101,13 @@ table {
   margin: 0 auto;
   margin-top: 50px;
   cursor: pointer;
+  transition: .4s;
+}
+
+.premium .premium-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: #ad7e4a;
 }
 
 .facts {
@@ -1325,10 +1353,14 @@ table {
   text-transform: uppercase;
   margin: 50px auto 0 auto;
   display: block;
+  cursor: pointer;
+  transition: .4s;
 }
 
 .contact-us .contact-us-btn:hover {
-  cursor: pointer;
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: #ad7e4a;
 }
 
 #map {
@@ -1416,6 +1448,13 @@ table {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   cursor: pointer;
+  transition: .4s;
+}
+
+.footer footer .to-top:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: #ad7e4a;
 }
 
 .footer footer .footer-social {
@@ -1514,6 +1553,13 @@ table {
   text-transform: uppercase;
   margin: 0 auto;
   cursor: pointer;
+  transition: .4s;
+}
+
+.footer footer .footer-subscribe .footer-subscribe-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  background-color: #ad7e4a;
 }
 
 @media screen and (max-width: 1444px) {
